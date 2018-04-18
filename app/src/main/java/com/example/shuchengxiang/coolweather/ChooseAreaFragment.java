@@ -159,7 +159,7 @@ public class ChooseAreaFragment extends Fragment {
 
     private void queryCounties(){
         titleText.setText(selectedCity.getCityName());
-        backButton.setText(selectedCity.getCityName());
+        backButton.setVisibility(View.VISIBLE);
         countyList = DataSupport.where("cityid =  ?", String.valueOf(selectedCity.getId())).find(County.class);
         if (countyList.size() > 0){
             dataList.clear();
